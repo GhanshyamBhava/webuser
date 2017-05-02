@@ -1,8 +1,7 @@
 # webuser
 Simple TYPO3 CMS Extension for beginer.
 
-## Features ##
-   
+* Features
     * Custom Backend Module for the extension
     * Fully working CRUD operation with ajax
     * Easy to understand and modify
