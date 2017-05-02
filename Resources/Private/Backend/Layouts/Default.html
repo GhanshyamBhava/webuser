@@ -1,0 +1,39 @@
+<f:be.container>
+<link rel="stylesheet" type="text/css" href="{f:uri.resource(path:'Css/style.css')}">
+<script type="text/javascript" src="{f:uri.resource(path:'JavaScript/jquery-2.2.4.min.js')}"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<div class="typo3-fullDoc">
+		<div id="typo3-docheader">
+			<div class="typo3-docheader-functions">
+				<div class="left">
+					<f:be.buttons.csh />
+					<f:be.menus.actionMenu>
+						<f:be.menus.actionMenuItem label="Overview" controller="" action="list" />
+						<f:be.menus.actionMenuItem label="Create new Users" action="new" controller="Users" />
+					</f:be.menus.actionMenu>
+					<f:be.buttons.icon uri="{f:uri.action(action:'new')}" icon="actions-document-new" title="Create new record" ></f:be.buttons.icon>
+				</div>
+				<div class="right">
+					<f:be.pagePath />
+					<f:be.pageInfo />
+				</div>
+			</div>
+			<div class="typo3-docheader-buttons">
+				<div class="left">
+
+				</div>
+				<div class="right">
+					<f:be.buttons.shortcut />
+				</div>
+			</div>
+
+		</div>
+		<div id="typo3-docbody">
+			<div id="typo3-inner-docbody">
+				<f:flashMessages />
+				<f:render section="content" />
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="{f:uri.resource(path:'JavaScript/script.js')}"></script>
+</f:be.container>

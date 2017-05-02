@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-05-01T09:50:16Z" product-name="webuser">
+		<header/>
+		<body>
+			<trans-unit id="tx_webuser_domain_model_fewebuser">
+				<source>Web User</source>
+			</trans-unit>
+			<trans-unit id="tx_webuser_domain_model_fewebuser.description">
+				<source>User management</source>
+			</trans-unit>
+			<trans-unit id="tx_webuser_domain_model_users">
+				<source>Users</source>
+			</trans-unit>
+			<trans-unit id="tx_webuser_domain_model_users.firstname">
+				<source>Firstname</source>
+			</trans-unit>
+			<trans-unit id="tx_webuser_domain_model_users.lastname">
+				<source>Lastname</source>
+			</trans-unit>
+			<trans-unit id="tx_webuser_domain_model_users.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_webuser_domain_model_users.bio">
+				<source>Bio</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

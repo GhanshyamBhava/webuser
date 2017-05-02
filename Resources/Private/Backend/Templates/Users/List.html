@@ -1,0 +1,55 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+
+<f:flashMessages />
+
+<table id="List" class="table table-stripped tx_webuser" >
+	<h1>Listing for Users</h1>
+	<tr>
+		<th><f:translate key="tx_webuser_domain_model_users.firstname" /></th>
+		<th><f:translate key="tx_webuser_domain_model_users.lastname" /></th>
+		<th><f:translate key="tx_webuser_domain_model_users.email" /></th>
+		<th><f:translate key="tx_webuser_domain_model_users.bio" /></th>
+		<th colspan="2">
+			<button title="Click to add new record" onClick="Action('<f:uri.action controller="Users" action="new" arguments="{users : user}" pageType='22222' />')" class="btn btn-success pull-right" style="width:100%" >
+				<i class="fa fa-plus-circle" aria-hidden="true"></i> Add New
+			</button>
+		</th>
+	</tr>
+
+	<f:for each="{users}" as="user">
+		<tr>
+			<td>{user.firstname}</td>
+			<td>{user.lastname}</td>
+			<td>{user.email}</td>
+			<td>{user.bio}</td>
+			
+
+			<td>
+				<button type="submit" class="btn btn-primary" title="Click to edit record for {user.firstname}" onClick="Action('<f:uri.action controller="Users" action="edit" arguments="{users : user}" pageType="456789" />')" >
+					<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+				</button>
+			</td>
+			<td>
+				<button class="btn btn-danger" title="Click to delete record for {user.firstname}" onClick="Action('<f:uri.action controller="Users" action="delete" arguments="{users : user}" pageType="89657201" />')">
+					<i class="fa fa-trash" aria-hidden="true"></i>
+				</button>
+			</td>
+		</tr>
+	</f:for>
+</table>
+
+</f:section>
