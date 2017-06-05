@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-		'searchFields' => 'firstname,lastname,email,bio',
+		'searchFields' => 'firstname,lastname,email,bio,dob',
         'iconfile' => 'EXT:webuser/Resources/Public/Icons/tx_webuser_domain_model_users.gif'
     ],
     'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, firstname, lastname, email, bio',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, firstname, lastname, email, bio, dob',
     ],
     'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, firstname, lastname, email, bio, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, firstname, lastname, email, bio, dob, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
 		'sys_language_uid' => [
@@ -144,6 +144,17 @@ return [
 			    'eval' => 'trim',
 			],
 	        'defaultExtras' => 'richtext:rte_transform[mode=ts_css]'
+	    ],
+	    'dob' => [
+	        'exclude' => true,
+	        'label' => 'LLL:EXT:webuser/Resources/Private/Language/locallang_db.xlf:tx_webuser_domain_model_users.dob',
+	        'config' => [
+			    'dbType' => 'date',
+			    'type' => 'input',
+			    'size' => 7,
+			    'eval' => 'date',
+			    'default' => '0000-00-00'
+			],
 	    ],
     ],
 ];

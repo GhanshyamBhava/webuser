@@ -1,34 +1,40 @@
-
 <div class="col-xs-6">
 	<div class="form-group">
 		<label for="firstname">
 			<f:translate key="tx_webuser_domain_model_users.firstname" />
-		</label><br />
-		<f:form.textfield property="firstname" class="form-control" /><br />
+		</label>
+		<f:form.textfield property="firstname" class="form-control" />
 	</div>
 </div>
 <div class="col-xs-6">
 	<div class="form-group">
 		<label for="lastname">
 			<f:translate key="tx_webuser_domain_model_users.lastname" />
-		</label><br />
-		<f:form.textfield property="lastname" class="form-control" /><br />
+		</label>
+		<f:form.textfield property="lastname" class="form-control" />
 	</div>
 </div>
-<div class="col-xs-12">
+<div class="col-xs-6">
 	<div class="form-group">
 		<label for="email">
 			<f:translate key="tx_webuser_domain_model_users.email" />
-		</label><br />
-		<f:form.textfield property="email" class="form-control" /><br />
+		</label>
+		<f:form.textfield property="email" class="form-control" />
 	</div>
 </div>
-
+<div class="col-xs-6">
+	<div class="form-group">
+		<label for="dob">
+			<f:translate key="tx_webuser_domain_model_users.dob" />
+		</label>
+		<f:form.textfield property="dob" value="{users.dob->f:format.date(format:'d-m-Y')}" class="dob form-control" />
+	</div>
+</div>
 <div class="col-xs-12">
 	<div class="form-group">
 		<label for="bio">
 			<f:translate key="tx_webuser_domain_model_users.bio" />
-		</label><br />
-		<f:form.textarea property="bio" cols="40" class="form-control" rows="5" /><br />
+		</label>
+		<f:form.textarea property="bio" cols="40" class="form-control" rows="5" />
 	</div>
 </div>

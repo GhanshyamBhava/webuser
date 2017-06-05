@@ -23,18 +23,20 @@ Otherwise your changes will be overwritten the next time you save the extension 
 		<th><f:translate key="tx_webuser_domain_model_users.lastname" /></th>
 		<th><f:translate key="tx_webuser_domain_model_users.email" /></th>
 		<th><f:translate key="tx_webuser_domain_model_users.bio" /></th>
+		<th><f:translate key="tx_webuser_domain_model_users.dob" /></th>
 		<th> </th>
 		<th> </th>
 	</tr>
 
-	<f:for each="{users}" as="user">
+	<f:for each="{userss}" as="users">
 		<tr>
-			<td><f:link.action action="show" arguments="{user : user}"> {user.firstname}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{user : user}"> {user.lastname}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{user : user}"> {user.email}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{user : user}"> {user.bio}</f:link.action></td>
-			<td><f:link.action action="edit" arguments="{users : user}">Edit</f:link.action></td>
-			<td><f:link.action action="delete" arguments="{users : user}">Delete</f:link.action></td>
+			<td><f:link.action action="show" arguments="{users : users}"> {users.firstname}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{users : users}"> {users.lastname}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{users : users}"> {users.email}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{users : users}"> {users.bio}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{users : users}"> {users.dob -> f:format.date()}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{users : users}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{users : users}">Delete</f:link.action></td>
 		</tr>
 	</f:for>
 </table>

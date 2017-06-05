@@ -10,6 +10,7 @@ CREATE TABLE tx_webuser_domain_model_users (
 	lastname varchar(255) DEFAULT '' NOT NULL,
 	email varchar(255) DEFAULT '' NOT NULL,
 	bio text NOT NULL,
+	dob date DEFAULT '0000-00-00',
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

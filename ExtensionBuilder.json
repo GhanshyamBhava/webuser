@@ -72,6 +72,16 @@
                             "propertyName": "bio",
                             "propertyType": "RichText",
                             "uid": "370136847170"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "dob",
+                            "propertyType": "NativeDate",
+                            "uid": "1235101987584"
                         }
                     ]
                 },
@@ -109,8 +119,8 @@
         },
         "extensionKey": "webuser",
         "name": "Web Users",
-        "originalExtensionKey": "",
-        "originalVendorName": "",
+        "originalExtensionKey": "webuser",
+        "originalVendorName": "USER",
         "persons": [],
         "plugins": [
             {
@@ -127,7 +137,7 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2017-05-01 09:50",
+        "last_modified": "2017-06-05 03:36",
         "extension_builder_version": "7.6.18",
         "be_user": " (1)"
     }

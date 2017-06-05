@@ -19,9 +19,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:render partial="FormErrors" arguments="{object:Users}" />
 
-<f:form action="update"  name="users" object="{users}" >
-	<f:render partial="Users/FormFields" arguments="{users:users}" />
-		<f:form.submit value="Save" />
-	</f:form>
+<f:form action="update" name="users" object="{users}" >
+<f:render partial="Users/FormFields" arguments="{users:users}" />
+	<f:form.submit value="Save" />
+</f:form>
 </f:section>
 </html>

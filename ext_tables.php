@@ -11,21 +11,24 @@ call_user_func(
             'Web User'
         );
 
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
-            'USER.Webuser',
-            'web', // Make module a submodule of 'web'
-            'bewebuser', // Submodule key
-            '', // Position
-            [
-                'Users' => 'list, show, new, create, edit, update, delete',
-            ],
-            [
-                'access' => 'user,group',
-                'icon'   => 'EXT:' . $extKey . '/Resources/Public/Icons/user_mod_bewebuser.svg',
-                'labels' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_bewebuser.xlf',
-                /*'navigationComponentId' => '',*/
-            ]
-        );
+        if (TYPO3_MODE === 'BE') {
+
+            \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+                'USER.Webuser',
+                'web', // Make module a submodule of 'web'
+                'bewebuser', // Submodule key
+                '', // Position
+                [
+                    'Users' => 'list, show, new, create, edit, update, delete',
+                ],
+                [
+                    'access' => 'user,group',
+					'icon'   => 'EXT:' . $extKey . '/Resources/Public/Icons/user_mod_bewebuser.svg',
+                    'labels' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_bewebuser.xlf',
+                ]
+            );
+
+        }
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($extKey, 'Configuration/TypoScript', 'Web Users');
 

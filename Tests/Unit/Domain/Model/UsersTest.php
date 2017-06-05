@@ -129,4 +129,32 @@ class UsersTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
         );
 
     }
+
+    /**
+     * @test
+     */
+    public function getDobReturnsInitialValueForDateTime()
+    {
+        self::assertEquals(
+            null,
+            $this->subject->getDob()
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function setDobForDateTimeSetsDob()
+    {
+        $dateTimeFixture = new \DateTime();
+        $this->subject->setDob($dateTimeFixture);
+
+        self::assertAttributeEquals(
+            $dateTimeFixture,
+            'dob',
+            $this->subject
+        );
+
+    }
 }

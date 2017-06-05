@@ -46,6 +46,13 @@ class Users extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $bio = '';
 
     /**
+     * dob
+     *
+     * @var \DateTime
+     */
+    protected $dob = null;
+
+    /**
      * Returns the firstname
      *
      * @return string $firstname
@@ -127,5 +134,26 @@ class Users extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setBio($bio)
     {
         $this->bio = $bio;
+    }
+
+    /**
+     * Returns the dob
+     *
+     * @return \DateTime $dob
+     */
+    public function getDob()
+    {
+        return $this->dob;
+    }
+
+    /**
+     * Sets the dob
+     *
+     * @param \DateTime $dob
+     * @return void
+     */
+    public function setDob(\DateTime $dob)
+    {
+        $this->dob = $dob;
     }
 }

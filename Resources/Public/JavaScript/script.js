@@ -1,3 +1,17 @@
+$(function () {
+    $("body").on("click", ".dob", function(){
+        $(this).datepicker({
+            changeMonth: true,
+            changeYear: true,    
+            showButtonPanel: true,
+            yearRange: "-100:+0",
+            dateFormat: 'dd-mm-yy',
+            autoclose: false
+        });
+        $(this).datepicker("show");
+    });
+
+});
 
 // Delete action as well as get Update and New record form
 function Action (arg) {
@@ -5,7 +19,6 @@ function Action (arg) {
         type: 'POST',
         url: arg,
         success: function (data) {
-            // $('.typo3-fullDoc div').remove();
             $(".typo3-fullDoc").html(data);
         }
     });
@@ -32,5 +45,5 @@ function saveForm(event)
         }).fail(function () {
             alert('Error!');return false;
         }).always(function () {
-    });
+        });
 }

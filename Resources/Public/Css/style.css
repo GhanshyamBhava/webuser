@@ -1,0 +1,302 @@
+body{
+  background: transparent;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.pull-down{
+  margin-top: 5%;
+}
+
+.infotip{
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+.ui-dialog {
+    background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0 !important;
+    width: 90% !important;
+}
+.ui-dialog .ui-dialog-title{
+ /* margin-left: 5%;
+  margin-top: -34px;
+  padding-left: 1%;
+  width: 20%;*/
+}
+
+label {
+  display: inline-block;
+  width: 10em;
+}
+fieldset div {
+  margin-bottom: 2em;
+}
+fieldset .help {
+  display: inline-block;
+}
+.form-input{
+  width: 90%;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  color: white;
+  display: block;
+  font-size: 14px;
+  height: 34px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+textarea{
+  width: 95%;
+  height: 118px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  color: white;
+  display: block;
+  font-size: 14px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+#catselector{
+  background: transparent;
+  border: 1px solid white;
+  width: 90%;
+  color: white;
+  padding: 1%;
+}
+
+.ui-tooltip {
+  width: 210px;
+}
+
+/*Wrapper main*/
+.content-wrapper{
+  padding: 0 50px 0 50px;  
+}
+
+.tab-container{
+  margin:51px 0 0 250px
+}
+.tab-left{
+  width: 200px;
+  float: left;
+}
+.tab-center{
+  width: 200px;
+  float: left;
+}
+.tab-right{
+  width: 200px;
+  float: left;
+}
+.content-left{
+  width: 450px;
+  margin-left: 50px;
+  margin-top: 25px;
+  float: left;
+}
+.content-right{
+  margin-top: 25px;
+  width: 450px;
+  float: left;
+}
+.content-full{
+  margin-left: 50px;
+  width: 900px;
+}
+.content-info{
+    border: 1px solid;
+    padding: 2%;
+    height: auto;
+    color: #000;
+}
+.clear-fix{
+  clear: both;
+}
+.table{
+  background-color: transparent;!important;
+  border:none;!important;
+}
+.content-info h3 {
+  background: rgba(0, 0, 0, 0) url("../image/bg.jpg") repeat fixed 0 0;
+  margin-left: 5%;
+  margin-top: -34px;
+  padding-left: 1%;
+  width: 20%;
+}
+button{
+  background: transparent none repeat scroll 0 0;
+  border-radius: unset;
+  color: white;  
+  padding: 1%;
+  width: 15%;
+}
+img{
+    border-bottom: 1px solid white;
+    border-image: none;
+    border-left: 1px solid white;
+    border-radius: 50%;
+    border-top: 1px solid white;
+    height: 100px;
+    padding: 9px;
+    box-shadow: 1px 0px 15px #00004b;
+}
+img:hover{
+    box-shadow: 2px 0px 22px #00004b;
+}
+
+.ui-widget-header,.ui-widget-content,.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+  background: transparent;
+  border: none;
+  color: white;
+}
+.ui-datepicker-year{background: transparent;}
+.ui-datepicker-month{background: transparent;}
+.icondel{
+    background: url('images/ui-icons_444444_256x240.png');
+    background-repeat: no-repeat;
+    background-position: 25px 0px;
+  }
+
+.ui-slider-handle{
+  background: #fff !important;
+}
+.ui-slider-range.ui-corner-all.ui-widget-header.ui-slider-range-min{
+  background: activeborder;
+}
+
+input[type="checkbox"] {
+  margin: 10px !important;
+}
+.popover{
+  background: rgba(0, 0, 0, 0) url("../image/bg.jpg") repeat fixed 0 0;
+}
+.popbut{
+  background: transparent;
+  margin-left: 15px;
+  padding: 2px;
+  width: 30%
+}
+.popover.bottom > .arrow::after{
+  height: 12px;
+  background: transparent;!important;
+  border-bottom-color:transparent;
+}
+
+.ttip {
+    background: transparent none repeat scroll 0 0;
+    margin: -30px;
+}
+.ttip-inner{
+  background: rgba(0,0,0,0.4); important;
+}
+/************************************* Media Query ***********************************************************************/
+
+/*Modify Styling For Small Device*/
+
+
+@media only screen and (max-width: 1024px){
+
+  /*Wrapper main*/
+  .content-wrapper{
+    margin-top: 40px;
+    padding: 0 25px 0 25px;  
+  }
+  
+  .content-info h3 {
+    background: rgba(0, 0, 0, 0) url("../image/bg.jpg") repeat fixed 0 0;
+    margin-left: 5%;
+    margin-top: -12px;
+    padding-left: 1%;
+    width: 100px;
+    font-size: 12px;
+  }
+
+  /*Create Icon Small*/
+  img{
+    border-bottom: 1px solid white;
+    border-image: none;
+    border-left: 1px solid white;
+    border-radius: 50%;
+    border-top: 1px solid white;
+    height: 50px;
+    padding: 9px;
+  }
+
+  /*Manage image possition*/
+  .tab-left{
+    width: 75px;
+    float: left;
+  }
+  .tab-center{
+    width: 75px;
+    float: left;
+  }
+  .tab-right{
+    width: 75px;
+    float: left;
+  }
+
+  /*Hide tool tip*/
+  .ui-tooltip {
+    display: none;
+  }
+
+  /*Form css*/
+  .content-left{
+    width: 100%;
+    margin-left: 0;
+    margin-top: 25px;
+    float: left;
+  }
+  .content-right{
+    margin-top: 0;
+    width: 100%;
+    float: left;
+  }
+  .content-full{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  label {
+      display: inline-block;
+      font-size: 12px;
+  }
+  fieldset{
+    margin-left: 10px;
+    padding: 10px;
+  }
+  button{
+    font-size: 12px !important;
+    box-shadow: 1px 0px 15px #00004b;
+    width: 50%;
+  }
+  
+  textarea{
+    width: 90%;
+    height: 100px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: white;
+    display: block;
+    font-size: 14px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  }
+
+  .icondel{
+    background: url('../images/ui-icons_444444_256x240.png');
+  }
+}

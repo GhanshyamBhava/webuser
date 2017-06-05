@@ -15,4 +15,8 @@
 	<f:translate key="tx_webuser_domain_model_users.bio" />
 </label><br />
 	<f:form.textarea property="bio" cols="40" rows="15" /><br />
+<label for="dob">
+	<f:translate key="tx_webuser_domain_model_users.dob" />
+</label><br />
+	<f:form.textfield property="dob" value="{users.dob->f:format.date()}" /><br />
 </html>

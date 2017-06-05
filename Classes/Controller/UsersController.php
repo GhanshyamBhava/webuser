@@ -33,7 +33,6 @@ class UsersController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function listAction()
     {
         $users = $this->usersRepository->findAll();
-        
         $this->view->assign('users', $users);
     }
 
@@ -55,6 +54,19 @@ class UsersController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function newAction()
     {
+
+    }
+
+    /**
+    * @return void
+    */
+    public function initializeCreateAction() {
+        if (isset($this->arguments['newUsers'])) {
+            $this->arguments['newUsers']
+                ->getPropertyMappingConfiguration()
+                ->forProperty('dob')
+                ->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter', \TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT, 'd-m-Y');
+        }
 
     }
 
@@ -81,6 +93,18 @@ class UsersController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function editAction(\USER\Webuser\Domain\Model\Users $users)
     {
         $this->view->assign('users', $users);
+    }
+
+    /**
+    * @return void
+    */
+    public function initializeUpdateAction() {
+        if (isset($this->arguments['users'])) {
+            $this->arguments['users']
+                ->getPropertyMappingConfiguration()
+                ->forProperty('dob')
+                ->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter', \TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT, 'd-m-Y');
+        }
     }
 
     /**

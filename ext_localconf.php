@@ -17,26 +17,25 @@ call_user_func(
             ]
         );
 
-		// wizards
-		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-			'mod {
-				wizards.newContentElement.wizardItems.plugins {
-					elements {
-						fewebuser {
-							icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKey) . 'Resources/Public/Icons/user_plugin_fewebuser.svg
-							title = LLL:EXT:webuser/Resources/Private/Language/locallang_db.xlf:tx_webuser_domain_model_fewebuser
-							description = LLL:EXT:webuser/Resources/Private/Language/locallang_db.xlf:tx_webuser_domain_model_fewebuser.description
-							tt_content_defValues {
-								CType = list
-								list_type = webuser_fewebuser
-							}
+	// wizards
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+		'mod {
+			wizards.newContentElement.wizardItems.plugins {
+				elements {
+					fewebuser {
+						icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKey) . 'Resources/Public/Icons/user_plugin_fewebuser.svg
+						title = LLL:EXT:webuser/Resources/Private/Language/locallang_db.xlf:tx_webuser_domain_model_fewebuser
+						description = LLL:EXT:webuser/Resources/Private/Language/locallang_db.xlf:tx_webuser_domain_model_fewebuser.description
+						tt_content_defValues {
+							CType = list
+							list_type = webuser_fewebuser
 						}
 					}
-					show = *
 				}
-		   }'
-		);
-
+				show = *
+			}
+	   }'
+	);
     },
     $_EXTKEY
 );
