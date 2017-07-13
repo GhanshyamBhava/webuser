@@ -32,6 +32,30 @@
 </div>
 <div class="col-xs-12">
 	<div class="form-group">
+		<label for="address">
+			<f:translate key="tx_webuser_domain_model_users.address" />
+		</label>
+		<f:form.textarea property="address" id="address" additionalAttributes="{onblur: 'getLatLong()'}" cols="40" class="form-control" rows="5" />
+	</div>
+</div>
+<div class="col-xs-6">
+	<div class="form-group">
+		<label for="lat">
+			<f:translate key="tx_webuser_domain_model_users.lat" />
+		</label>
+		<f:form.textfield property="lat" id="latitude" readonly="NULL" class="form-control" />
+	</div>
+</div>
+<div class="col-xs-6">
+	<div class="form-group">
+		<label for="lon">
+			<f:translate key="tx_webuser_domain_model_users.lon" />
+		</label>
+		<f:form.textfield property="lon" id="longitude" readonly="NULL" class="form-control" />
+	</div>
+</div>
+<div class="col-xs-12">
+	<div class="form-group">
 		<label for="bio">
 			<f:translate key="tx_webuser_domain_model_users.bio" />
 		</label>

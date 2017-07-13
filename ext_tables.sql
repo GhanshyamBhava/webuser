@@ -9,8 +9,11 @@ CREATE TABLE tx_webuser_domain_model_users (
 	firstname varchar(255) DEFAULT '' NOT NULL,
 	lastname varchar(255) DEFAULT '' NOT NULL,
 	email varchar(255) DEFAULT '' NOT NULL,
-	bio text NOT NULL,
+	address text NOT NULL,
+	lat FLOAT UNSIGNED NOT NULL DEFAULT '0',
+	lon FLOAT UNSIGNED NOT NULL DEFAULT '0',
 	dob date DEFAULT '0000-00-00',
+	bio text NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

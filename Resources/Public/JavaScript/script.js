@@ -10,7 +10,6 @@ $(function () {
         });
         $(this).datepicker("show");
     });
-
 });
 
 // Delete action as well as get Update and New record form
@@ -46,4 +45,32 @@ function saveForm(event)
             alert('Error!');return false;
         }).always(function () {
         });
+}
+var CLIPBOARD;
+
+
+function getLatLong(){
+    var address = $('#address').val();
+    
+    if (address == '') {
+        address = $('#address').val('Bhavnagar, Gujarat, India');
+    };
+
+    if (address != '') {
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "http://maps.googleapis.com/maps/api/geocode/json",
+            data: {'address': address,'sensor':false},
+            success: function(data){
+                if(data.results.length){
+                    $('#latitude').val(data.results[0].geometry.location.lat);
+                $('#longitude').val(data.results[0].geometry.location.lng);
+                }else{
+                $('#latitude').val('invalid address');
+                $('#longitude').val('invalid address');
+               }
+            }
+        });
+    };
 }

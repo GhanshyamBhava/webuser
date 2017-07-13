@@ -39,6 +39,27 @@ class Users extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $email = '';
 
     /**
+     * lat
+     *
+     * @var float
+     */
+    protected $lat = '';
+
+    /**
+     * lon
+     *
+     * @var float
+     */
+    protected $lon = '';
+
+    /**
+     * address
+     *
+     * @var string
+     */
+    protected $address = '';
+
+    /**
      * bio
      *
      * @var string
@@ -113,6 +134,69 @@ class Users extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setEmail($email)
     {
         $this->email = $email;
+    }
+
+    /**
+     * Returns the lat
+     *
+     * @return string $lat
+     */
+    public function getLat()
+    {
+        return $this->lat;
+    }
+
+    /**
+     * Sets the lat
+     *
+     * @param float $lat
+     * @return void
+     */
+    public function setLat($lat)
+    {
+        $this->lat = $lat;
+    }
+
+    /**
+     * Returns the lon
+     *
+     * @return float $lon
+     */
+    public function getLon()
+    {
+        return $this->lon;
+    }
+
+    /**
+     * Sets the lon
+     *
+     * @param string $lon
+     * @return void
+     */
+    public function setLon($lon)
+    {
+        $this->lon = $lon;
+    }
+
+    /**
+     * Returns the address
+     *
+     * @return string $address
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * Sets the address
+     *
+     * @param string $address
+     * @return void
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
     }
 
     /**

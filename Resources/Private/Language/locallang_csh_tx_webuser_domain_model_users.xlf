@@ -24,6 +24,16 @@
 			<trans-unit id="dob.description">
 				<source>dob</source>
 			</trans-unit>
+
+			<trans-unit id="tx_webuser_domain_model_users.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_webuser_domain_model_users.lat">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="tx_webuser_domain_model_users.long">
+				<source>Longitude</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
